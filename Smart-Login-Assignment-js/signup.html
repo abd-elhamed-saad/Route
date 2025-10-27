@@ -6,24 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Smart Login</title>
+    <title>Smart Login - Sign Up</title>
 </head>
-<body>
-    <div class="box  m-auto text-center mt-5">
-        <h1 class="mb-4">Smart Login System</h1>
-       
-            <input type="text" class="form-control mb-0" id="userNameInput" name= "userName" placeholder="Enter Your Name ">
-            <div id="nameError" class="alert alert-danger d-none mt-0"></div>
-            <input type="email" class="form-control mt-3" id="userEmailInput" name= "userEmail" placeholder="Enter Your Email">
-            <div id="emailError" class="alert alert-danger d-none mt-0"></div>
-            <input type="password" class="form-control mt-3" id="userPasswordInput" name= "userPasswrd" placeholder="Enter Your Password">
-            <div id="passwordError" class="alert alert-danger d-none mt-0"></div>
-            <div id="SigninCredential" class=" mt-3  d-none"></div>
-            <button id="signUp" type="submit" class="btn mt-4 mb-3 w-100">SignUp</button>
-            <p>You have an account? <a href="index.html" >Signin </a></p>
-       
+<body class="signup-page">
+<div class="container-fluid min-vh-100">
+    <div class="row min-vh-100 justify-content-center align-items-center">
+
+        <div class="col-md-6 d-none d-lg-flex justify-content-center align-items-center">
+            <div class="img-container">
+                <img src="img/signup.png" class="img-fluid rounded" alt="Signup Illustration">
+            </div>
+        </div>
+
+        <div class="col-md-5 col-lg-4">
+            <div class="box text-center p-4">
+                <h1 class="mb-4">Create Account</h1>
+
+                <input type="text" class="form-control mb-0" id="userNameInput" name="userName" placeholder="Enter Your Name">
+                <div id="nameError" class="alert alert-danger d-none mt-0"></div>
+
+                <input type="email" class="form-control mt-3" id="userEmailInput" name="userEmail" placeholder="Enter Your Email">
+                <div id="emailError" class="alert alert-danger d-none mt-0"></div>
+
+                <input type="password" class="form-control mt-3" id="userPasswordInput" name="userPasswrd" placeholder="Enter Your Password">
+                <div id="passwordError" class="alert alert-danger d-none mt-0"></div>
+
+                <div id="SigninCredential" class="mt-3 d-none"></div>
+
+                <button id="signUp" type="submit" class="btn mt-4 mb-3 w-100">Sign Up</button>
+
+                <p>Already have an account? <a href="index.html">Sign In</a></p>
+            </div>
+        </div>
 
     </div>
-    <script src="js/signUp.js"></script>
+</div>
+
+<script src="js/signUp.js"></script>
 </body>
 </html>

@@ -1,137 +1,351 @@
 *
-
 {
     margin: 0;
     padding: 0;
 }
+
 :root {
-    --placeholder-color:#ccc ;
-   
-    
-  }
+    --placeholder-color: #ccc;
+
+    --login-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --login-primary: #667eea;
+    --login-secondary: #764ba2;
+    --login-accent: #f093fb;
+
+    --signup-bg: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --signup-primary: #f5576c;
+    --signup-secondary: #f093fb;
+    --signup-accent: #ffd28f;
+
+    --welcome-bg: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --welcome-primary: #00f2fe;
+    --welcome-secondary: #4facfe;
+
+    --dark-bg: #1a1a2e;
+    --text-light: #ffffff;
+    --text-muted: #b4b4b4;
+    --error-color: #ff6b6b;
+    --success-color: #51cf66;
+}
+
 body
 {
-    background-color: #24353f;
-    font-family: sans-serif;
-    
+    background: var(--login-bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
+
+body.login-page {
+    background: var(--login-bg);
+}
+
+body.signup-page {
+    background: var(--signup-bg);
+}
+
+body.welcome-page {
+    background: var(--welcome-bg);
+}
+
+.img-container {
+    max-width: 100%;
+    width: 100%;
+}
+
+.img-container img {
+    max-width: 550px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+}
+
 nav
 {
-    background-color: #24353f;
-  
-    box-shadow: -2px -2px 50px black;
-    
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
-nav a 
+
+nav h2 {
+    color: white;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 0;
+}
+
+nav a
 {
-    width: 100px;
+    width: auto;
 }
+
 nav a span
 {
-    color: #ccc;
-    font-size: 18px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
 }
-input::placeholder 
+
+.btn-outline-warning {
+    border-color: rgba(255, 255, 255, 0.6) !important;
+    color: white !important;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-warning:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-color: white !important;
+    transform: scale(1.05);
+}
+
+input::placeholder
 {
     color: var(--placeholder-color) !important;
 }
-.box
-{
-    background-color: #24353f;
-    box-shadow: -2px -2px 50px black;
-    width: 60%;
-    padding: 50px;
-}
-.box h1 
-{
-    color: #17a2b8;
-}
-::placeholder 
+
+::placeholder
 {
     color: #cccccc !important;
 }
-.box input 
+
+.box input
 {
-    background-color: #24353f;
+    background: rgba(255, 255, 255, 0.2) !important;
     color: white !important;
-    
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    padding: 12px 20px;
+    font-size: 15px;
 }
 
+.box input::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.box
+{
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 100%;
+    max-width: 500px;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.box h1
+{
+    color: var(--text-light);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+}
 
 .box input:focus
 {
-    background-color: #24353f;
+    background: rgba(255, 255, 255, 0.25) !important;
     outline: none !important;
-    border: 1px solid #17a2b8 ;
-} 
-#login 
-{
-    background-color:#24353f  ;
-    color: #17a2b8;
-    border: 1px solid #17a2b8;
-}
-#login:hover
-{
-    background-color: #17a2b8;
-    color: white;
-}
-#signUp 
-{
-    background-color:#24353f  ;
-    color: #17a2b8;
-    border: 1px solid #17a2b8;
-}
-#signUp:hover
-{
-    background-color: #17a2b8;
-    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.6) !important;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
-.box p 
+#login,
+#signUp,
+.btn
 {
-    color: white;
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    border: 2px solid rgba(255, 255, 255, 0.5) !important;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 14px;
 }
-.box p a 
+
+#login:hover,
+#signUp:hover,
+.btn:hover
+{
+    background: rgba(255, 255, 255, 0.9) !important;
+    color: #667eea !important;
+    border: 2px solid white !important;
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.login-page #login:hover {
+    color: var(--login-secondary) !important;
+}
+
+.signup-page #signUp:hover {
+    color: var(--signup-primary) !important;
+}
+
+.box p
+{
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+}
+
+.box p a
 {
     color: white;
     text-decoration: none;
-    
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
+
 .box p a:hover
 {
     text-decoration: underline;
-} 
-.alert
-{
-   
-    
-    text-align: left;
-    padding: 0;
-    color: rgba(240, 52, 52, 0.8);
-    background-color: #24353f !important;
-    border: none;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
-.welcome 
+.alert
 {
-  background-color: #24353f;
-  box-shadow: -2px -2px 50px black;
+    text-align: left;
+    padding: 10px 15px !important;
+    margin-top: 8px !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 8px;
+    border: 2px solid !important;
+    font-size: 13px;
+    font-weight: 600;
+    color: white !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.alert-danger {
+    border-color: #ff4757 !important;
+    background: rgba(255, 71, 87, 0.2) !important;
+    color: #fff !important;
+}
+
+#error,
+#SigninCredential {
+    padding: 12px 20px !important;
+    background: rgba(0, 0, 0, 0.6) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 10px;
+    border: 2px solid !important;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    margin-top: 15px;
+}
+
+#error {
+    border-color: #ff4757 !important;
+    background: rgba(255, 71, 87, 0.25) !important;
+    color: #ffffff !important;
+}
+
+#SigninCredential.success,
+.alert-success {
+    border-color: #2ed573 !important;
+    background: rgba(46, 213, 115, 0.25) !important;
+    color: #ffffff !important;
+}
+
+#SigninCredential.error {
+    border-color: #ff4757 !important;
+    background: rgba(255, 71, 87, 0.25) !important;
+    color: #ffffff !important;
+}
+
+.is-valid {
+    border-color: #2ed573 !important;
+    background: rgba(46, 213, 115, 0.1) !important;
+    box-shadow: 0 0 10px rgba(46, 213, 115, 0.3) !important;
+}
+
+.is-invalid {
+    border-color: #ff4757 !important;
+    background: rgba(255, 71, 87, 0.1) !important;
+    box-shadow: 0 0 10px rgba(255, 71, 87, 0.3) !important;
+}
+
+#emailErrorLogin,
+#passwordErrorLogin,
+#nameError,
+#emailError,
+#passwordError {
+    background: rgba(255, 71, 87, 0.3) !important;
+    border: 2px solid #ff4757 !important;
+    color: #ffffff !important;
+    padding: 8px 12px !important;
+    border-radius: 6px;
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.welcome
+{
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
   width: 50%;
-  height: 100px;
+  min-height: 150px;
+  padding: 30px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-   
+  gap: 20px;
 }
+
+.welcome-icon {
+    width: 250px;
+    height: 150px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
 .welcome h3
 {
-    color: #17a2b8;
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    text-align: center;
 }
 
 @media screen and  (min-width:0px) and  (max-width:800px)
 {
-
     .box
+    {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .welcome
     {
         width: 90%;
     }
