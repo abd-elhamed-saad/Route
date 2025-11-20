@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+}
+
+/* Grid Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas:
+    "iphone iphone article article"
+    "keyboard imac imac icloud"
+    "games ipad ipad icloud"
+    "twitter popular tv tv";
+  gap: 10px;
+  padding: 20px;
+}
+
+/* Generic Box */
+.box {
+  padding: 20px;
+  border-radius: 6px;
+  color: #222;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Grid Areas */
+.keyboard { grid-area: keyboard; background: #e63946; color: #fff; }
+.games    { grid-area: games; background: #f9f9f9; }
+.imac     { grid-area: imac; background: #f5f5f5; }
+.ipad     { grid-area: ipad; background: #94aebd; color: #fff; }
+.icloud   { grid-area: icloud; background: #8e44ad; color: #fff; }
+.tv       { grid-area: tv; background: #222; color: #fff; }
+.article  { grid-area: article; background: #f4f4f4; }
+.iphone   { grid-area: iphone; background: #fff; }
+.twitter  { grid-area: twitter; background: #1DA1F2; color: #fff; }
+.popular  { grid-area: popular; background: #fff; }
+
+/* Images */
+.box img {
+  max-width: 100%;
+  margin: 10px auto;
+}
+
+/* Buttons & Links */
+.arrow-link {
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+.arrow-link.yellow { color: #ffcc00; }
+
+/* Tags */
+.tag {
+  background: #e63946;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* Typography */
+h3 { font-size: 16px; margin: 10px 0; }
+h2 { font-size: 20px; margin: 10px 0; }
+h1 { font-size: 24px; margin: 10px 0; }
+
+.grey { color: #777; font-size: 14px; }
+.caps { text-transform: uppercase; font-size: 12px; }

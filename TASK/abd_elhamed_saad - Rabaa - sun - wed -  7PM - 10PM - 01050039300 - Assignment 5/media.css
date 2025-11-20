@@ -1,0 +1,70 @@
+/* =========================================================
+   MEDIA: up to 600px (phones)
+   ========================================================= */
+@media only screen and (max-width: 600px) {
+  /* NAVBAR */
+  .navbar .container { flex-wrap: wrap; gap: 10px; }
+  .nav-links { flex-wrap: wrap; }
+
+  /* HERO */
+  .hero { height: auto; }
+  .hero-content { flex-direction: column; align-items: flex-start; }
+  .text-box { flex-basis: 100%; }
+  .text-box h2 { font-size: 2.2rem; }
+  .image-box { width: 100%; display: flex; justify-content: center; }
+  .image-box img { max-width: 300px; }
+
+  /* CHEFS */
+  .chefs-cards { gap: 16px; }
+  .chefs-cards .card { flex: 1 1 100%; }
+
+  /* GALLERY (keep flex + three columns logic, stack columns on small) */
+  .gallery-photos { flex-direction: column; }
+  .gallery-photos .col { width: 100%; }
+
+  /* CONTACT */
+  .contact-info { grid-template-columns: 1fr; }
+  .form-row { flex-direction: column; }
+
+  /* FOOTER */
+  footer .container { flex-direction: column; }
+}
+
+/* =========================================================
+   MEDIA: min 600px (large phones & portrait tablets)
+   ========================================================= */
+@media only screen and (min-width: 600px) {
+  /* keep your base; optionally tighten gallery spacing */
+  .gallery-photos { gap: 14px; }
+}
+
+/* =========================================================
+   MEDIA: min 768px (landscape tablets)
+   ========================================================= */
+@media only screen and (min-width: 768px) {
+  .text-box h2 { font-size: 2.6rem; }
+
+  /* CHEFS: allow two cards per row when space allows (still flex) */
+  .chefs-cards .card { flex: 1 1 calc(50% - 20px); }
+
+  /* CONTACT grid remains 2 cols as in base */
+}
+
+/* =========================================================
+   MEDIA: min 992px (laptops/desktops)
+   ========================================================= */
+@media only screen and (min-width: 992px) {
+  .hero-content { flex-wrap: wrap; } /* unchanged behavior */
+  /* CHEFS: back to three per row (same as your base flex: 1 1 30%) */
+  .chefs-cards .card { flex: 1 1 30%; }
+
+  /* GALLERY: keep three column flex groups as you wrote */
+}
+
+/* =========================================================
+   MEDIA: min 1200px (large desktops)
+   ========================================================= */
+@media only screen and (min-width: 1200px) {
+  .text-box h2 { font-size: 3rem; }
+  .image-box img { max-width: 420px; }
+}

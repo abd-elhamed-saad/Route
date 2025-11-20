@@ -1,0 +1,241 @@
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  background: #fff;
+  line-height: 2;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.muted { color: #777; }
+.lead { max-width: 720px; margin-inline: auto; }
+
+/*  2) HEADER  */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(2px);
+  z-index: 1000;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.logo img { width: 150px; display: block; }
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 18px;
+  padding-bottom: 4px;
+}
+
+.main-nav a:hover { color: #d4a053; }
+
+.main-nav .is-active {
+  border-bottom: 2px solid #d4a053;
+}
+
+/*  3) HERO   */
+.hero {
+  background-image: url("images/drew-coffman-1872.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+}
+
+.hero-content h1 { font-size: 40px; margin: 6px 0 10px; }
+.hero-content h4 { margin: 0; font-weight: 600; }
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  margin: 6px 8px 0 0;
+  font-weight: 600;
+}
+
+.btn-main { background: #b38244; color: #fff; }
+.btn-outline { background: transparent; color: #fff; border: 2px solid #fff; }
+
+
+.hero-tools {
+  position: fixed;
+  right: 10px;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #b38244;
+  padding: 12px 10px;
+  border-radius: 6px;
+}
+.hero-tools img {
+    width: 24px;
+    height: auto;
+   filter: grayscale(100%) brightness(0);
+}
+
+
+/*  4) GENERIC SECTION WRAPPER  */
+.section { padding: 70px 0; background: #fff; }
+
+
+.section-alt { background: #f7f3ee; }
+
+/*  5) SPLIT LAYOUT  */
+.split {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.split-col { flex: 1 1 460px; min-width: 300px; }
+
+.img {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+}
+
+/* "Who we are" */
+.icon-list { list-style: none; padding: 0; margin: 18px 0 0; }
+.icon-list li {
+  display: flex; align-items: center; gap: 12px;
+  margin: 14px 0; font-size: 16px;
+}
+.icon-list img {
+  width: 38px; height: 38px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 6px;
+  border: 1px solid #d4c4a5;
+}
+
+/*  6) (cards)  */
+.centered { text-align: center; }
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.card {
+  flex: 1 1 300px; max-width: 340px;
+  text-align: center;
+}
+
+.card img { width: 100%; height: 250px; display: block; border-radius: 4px; }
+.card h3 { margin: 12px 0 8px; }
+.card p  { color: #555; margin: 0; }
+
+/*  7) CONTACT  */
+.contact-list { list-style: none; padding: 0; margin: 18px 0 0; }
+.contact-list li {
+  display: flex; align-items: center; gap: 12px;
+  margin: 14px 0; color: #333; font-size: 15px;
+}
+
+/* small gold circle for contact icons */
+.circle {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: #b38244; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.circle img {
+  width: 18px; height: 18px;
+  filter: brightness(0) invert(1);
+}
+
+/* simple map placeholder */
+.map-box {
+  width: 100%; max-width: 520px; height: 360px;
+  background: #ddd; color: #666;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 4px;
+}
+
+/*  8) FOOTER  */
+.site-footer {
+  background: #242221;
+  color: #ccc;
+  padding-top: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* four equal columns with gap */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 26px;
+}
+
+.site-footer h4 { color: #fff; margin: 0 0 12px; }
+
+/* list with thin separators */
+.line-list { list-style: none; padding: 0; margin: 0; }
+.line-list li {
+  padding: 6px 0;
+  border-bottom: 1px solid #333;
+}
+
+.footer-bottom { text-align: center; padding: 18px 0 28px; }
+.footer-logo { width: 220px; display: block; margin: 10px auto; }
+
+/* social icons row */
+.socials a img {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: #444;
+  padding: 8px;
+  margin: 0 5px;
+  transition: background 0.25s;
+}
+.socials a img:hover { background: #d4a35f; }
+
+/*  9) RESPONSIVE MEDIA QUERIES  */
+@media (max-width: 992px) {
+  .main-nav a { margin-left: 14px; }
+}
+
+@media (max-width: 768px) {
+  .hero { min-height: 520px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 520px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .main-nav a { display: inline-block; margin: 8px 10px 0 0; }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ^css -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- ^alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>CRUD</title>
+</head>
+
+<body>
+
+    <!-- ^filds -->
+    <section class="content py-5 mb-5">
+        <div class="title p-1 mb-5 rounded-1">
+            <h2 class="text-center text-uppercase shadow"><span class="text-info">e</span>lonsol
+                <span class="text-info">s</span>tore
+            </h2>
+        </div>
+
+        <div class="content-form w-75 mx-auto ">
+
+            <div class="form-floating mb-3">
+                <input oninput="isInputValid(productRegex.nameRegex,this)" type="text"
+                    class="form-control border-0 border-bottom rounded-0" id="productName"
+                    placeholder="name@example.com">
+                <p class="text-danger fw-light fs-6 d-none inputAlart">please enter a valid product name</p>
+
+                <label for="productName">product name</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input oninput="isInputValid(productRegex.priceRegex,this)" type="number"
+                    class="form-control border-0 border-bottom rounded-0" id="productPrice"
+                    placeholder="name@example.com">
+                <p class="text-danger fw-light fs-6 d-none inputAlart">please enter a valid product price</p>
+
+                <label for="productPrice">product price</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <select oninput="isInputValid(productRegex.categoryRegex,this)"
+                    class="form-select border-0 border-bottom rounded-0" id="productCategory"
+                    aria-label="Floating label select example">
+                    <option selected disabled hidden>choose a category</option>
+                    <option>tv</option>
+                    <option>phone</option>
+                    <option>laptop</option>
+                    <option>camera</option>
+                    <option>printers</option>
+                    <option>accessories</option>
+                </select>
+                <p class="text-danger fw-light fs-6 d-none inputAlart">please choose a valid product category</p>
+
+                <label for="productCategory">product category</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <textarea oninput="isInputValid(productRegex.discriptionRegex,this)"
+                    class="form-control border-0 border-bottom rounded-0" id="productDiscription"
+                    placeholder="name@example.com"></textarea>
+                <p class="text-danger fw-light fs-6 d-none inputAlart">please enter a valid product discription</p>
+                <label for="productDiscription">product Discription</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="file" class="form-control border-0 border-bottom rounded-0" id="productImage"
+                    placeholder="name@example.com">
+                <p class="text-danger fw-light fs-6 d-none inputAlart">please choose a valid product image</p>
+                <label for="productImage">product Image</label>
+            </div>
+
+            <button onclick="addProuduct()" id="addBtn" class="btn btn-info text-light">Add product</button>
+            <button onclick="updateProudcts()" id="updateBtn" class="btn btn-warning d-none text-light">Update
+                product</button>
+
+        </div>
+
+    </section>
+
+    <!-- ^search -->
+    <div class="w-25 mx-auto pb-5 insearch">
+        <input oninput="searchProducts(this.value)" type="search" class="form-control border-2 " id="productSearch"
+            placeholder="search by product name">
+
+    </div>
+
+    <!-- ^products -->
+    <section class="products">
+        <div class="container">
+            <div class="row g-4" id="rowProducts">
+
+                <!-- Products will be displayed here -->
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ^js -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

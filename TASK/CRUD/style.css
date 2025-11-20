@@ -1,0 +1,37 @@
+.content-form .form-control:focus,
+.content-form .form-select:focus,
+.insearch input:focus {
+    box-shadow: none !important;
+    border-color: darkcyan !important;
+}
+
+.content-form .form-control,
+.content-form .form-select {
+    border: none !important;
+    border-bottom: 2px solid #dee2e6 !important;
+}
+
+.form-control.is-valid,
+.form-control.is-valid:focus,
+.form-select.is-valid,
+.form-select.is-valid:focus {
+    box-shadow: none;
+    border-color: rgb(4, 197, 4) !important;
+}
+
+.form-control.is-invalid,
+.form-control.is-invalid:focus,
+.form-select.is-invalid,
+.form-select.is-invalid:focus {
+    box-shadow: none;
+    border-color: rgb(248, 58, 58) !important
+}
+
+title {
+    width: fit-content;
+    margin: auto;
+}
+
+.products .card img {
+    width: 100%;
+}

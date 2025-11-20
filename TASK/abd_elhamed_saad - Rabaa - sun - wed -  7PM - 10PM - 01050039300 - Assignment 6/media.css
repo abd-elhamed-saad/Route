@@ -1,0 +1,17 @@
+/*   MEDIA: up to 600px (phones)   */
+@media only screen and (max-width: 600px) {
+  }
+/*   MEDIA: min 600px (large phones & portrait tablets)   */
+@media only screen and (min-width: 600px) {
+
+}
+
+/*   MEDIA: min 992px (laptops/desktops)   */
+@media only screen and (min-width: 992px) {
+
+}
+
+/*   MEDIA: min 1200px (large desktops)   */
+@media only screen and (min-width: 1200px) {
+
+}
