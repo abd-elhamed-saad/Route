@@ -1,0 +1,71 @@
+/* ========== Common Styles ========== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow: hidden;
+}
+
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.5s;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-bottom: 0;
+}
+
+/* ========== Loading Screens ========== */
+.loading-screen,
+.inner-loading-screen {
+    z-index: 999;
+}
+
+/* ========== Side Menu ========== */
+nav > * {
+    margin-bottom: 20px;
+}
+
+.menu-controller span,
+.img-card,
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.menu-controller img {
+    width: 50px;
+}
+
+/* ========== Meal Cards ========== */
+.img-overlay {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-card:hover .img-overlay {
+    height: 100%;
+    transition: height 0.5s;
+}
+
+/* ========== Search ========== */
+::placeholder {
+    color: grey !important;
+}
